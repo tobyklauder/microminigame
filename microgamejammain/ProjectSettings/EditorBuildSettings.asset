@@ -8,4 +8,28 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Toby.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Adeline.unity
+    guid: f5a4e102bb0451e4c811e5cc79feb8b4
+  - enabled: 1
+    path: Assets/Scenes/Esther.unity
+    guid: fbce7937eb61b1349aade73c7539ee65
+  - enabled: 1
+    path: Assets/Scenes/Ethan.unity
+    guid: e6b441c526a08fb4ea4de80c4032e36c
+  - enabled: 1
+    path: Assets/Scenes/Hunter.unity
+    guid: d57c78e569943fc49875dcef634fe9e1
+  - enabled: 1
+    path: Assets/Scenes/Isaiah.unity
+    guid: ed5d28c1d97ce2448aff7d32c73693ed
+  - enabled: 1
+    path: Assets/Scenes/Jacob.unity
+    guid: f529bb094991094459c6f15c56eacf9a
+  - enabled: 1
+    path: Assets/Scenes/Nick.unity
+    guid: d8d26111943a2504db3dd9a4d9608a5f
+  - enabled: 1
+    path: Assets/Scenes/Raine.unity
+    guid: 146bd63f2707e3e42b70ff5caebfa4b0
   m_configObjects: {}
