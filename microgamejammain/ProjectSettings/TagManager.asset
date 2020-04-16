@@ -43,8 +43,11 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background
+  - name: EthanBackground
     uniqueID: 1290657375
+    locked: 0
+  - name: WASD
+    uniqueID: 216457999
     locked: 0
   - name: Default
     uniqueID: 0
