@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 public class changescene : MonoBehaviour
 {
     [SerializeField, Tooltip("Scene to load")]
-    string scene;
-    public void changescenes()
+    static string scene;
+    static public void changescenes()
     {
         SceneManager.LoadScene(scene); 
     }

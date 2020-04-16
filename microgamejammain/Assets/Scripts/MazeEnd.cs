@@ -14,6 +14,8 @@ using UnityEngine;
 public class MazeEnd : MonoBehaviour
 {
     int lanterns;
+    float timer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,10 +25,17 @@ public class MazeEnd : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timer += Time.deltaTime;
+
+        print(timer);
         //if at end of stage and lanterns still are on the level lose a life
-        if (lanterncount() != 0)
+        if (lanterncount()!= 0 && Mathf.Floor(timer) == 5)
         {
             GameManager.lives -= 1;
+            print(GameManager.lives);
+            timer = 0;
+            pickgame.delayedscenechange();
+            
         }
     }
 
