@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.UI; 
 public class tobyplayercontroller : MonoBehaviour
 {
- 
- 
+
     [SerializeField, Tooltip("Speed in which the tank can move from side to side")]
     float speed = 0.30f;
     [SerializeField, Tooltip("Number of times player can die before loosing")]
