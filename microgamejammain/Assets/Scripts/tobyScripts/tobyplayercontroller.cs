@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI; 
 public class tobyplayercontroller : MonoBehaviour
 {
+    float time;
+    public Text timertext; 
     [SerializeField, Tooltip("Speed in which the tank can move from side to side")]
     float speed = 0.30f;
     [SerializeField, Tooltip("Number of times player can die before loosing")]
@@ -19,7 +21,10 @@ public class tobyplayercontroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        time += Time.deltaTime; 
+        timertext.text = ((int) time).ToString(); 
+        GameObject[] bullets = GameObject.FindGameObjectsWithTag("bullet");
+        if (Input.GetKeyDown(KeyCode.Space) && bullets.Length < 5)
         {
             GameObject bulletone = Instantiate(projectile, this.transform.position, transform.rotation);
             // bulletone.transform.eulerAngles = Vector3.forward * 90;
@@ -51,8 +56,8 @@ public class tobyplayercontroller : MonoBehaviour
             speed -= 0.10f;
             if (lives == 0)
             {
-                Destroy(this.gameObject);
-                //change scene 
+                GameManager.lives--;
+                Destroy(this.gameObject); 
             }
             Destroy(collision.gameObject);
         }
