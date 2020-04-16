@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI; 
 public class tobyplayercontroller : MonoBehaviour
 {
-    float time;
-    public Text timertext; 
+ 
+ 
     [SerializeField, Tooltip("Speed in which the tank can move from side to side")]
     float speed = 0.30f;
     [SerializeField, Tooltip("Number of times player can die before loosing")]
@@ -21,8 +21,7 @@ public class tobyplayercontroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime; 
-        timertext.text = ((int) time).ToString(); 
+     
         GameObject[] bullets = GameObject.FindGameObjectsWithTag("bullet");
         if (Input.GetKeyDown(KeyCode.Space) && bullets.Length < 5)
         {
