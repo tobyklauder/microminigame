@@ -5,7 +5,8 @@ using UnityEngine;
 public class tobyalien : MonoBehaviour
 {
     Rigidbody2D myrb;
-    int dir = 2;
+    [SerializeField, Tooltip("both direction and speed.")]
+    int dir = 3;
     int firechance;
     [SerializeField, Tooltip("Object aliens fire")]
     public GameObject bulletone;
@@ -24,7 +25,6 @@ public class tobyalien : MonoBehaviour
         {
             GameObject bullet = Instantiate(bulletone, this.transform.position, transform.rotation);
             bullet.GetComponent<Rigidbody2D>().velocity = new Vector3(0, -20, 0);
-            Debug.Log("firechance is 3");
         }
     }
 
@@ -39,15 +39,16 @@ public class tobyalien : MonoBehaviour
         }
         if (collision.gameObject.tag == "wall")
         {
-            this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y - 0.50f, this.transform.position.z);
-            if (dir == 2)
+            this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y - 1f, this.transform.position.z);
+            if (dir > 0)
             {
-                dir = -2;
+                dir++;
+                dir = -dir;
                 myrb.velocity = new Vector2(dir, 0);
             }
-            else if (dir == -2)
+            else if (dir < 0)
             {
-                dir = 2;
+                dir = Mathf.Abs(dir) + 1;
                 myrb.velocity = new Vector2(dir, 0);
             }
         }

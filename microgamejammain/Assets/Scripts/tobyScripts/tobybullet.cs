@@ -12,7 +12,7 @@ public class tobybullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(player.transform.position, this.transform.position) > 50)
+        if (Vector3.Distance(player.transform.position, this.transform.position) > 35)
         {
             Destroy(gameObject);
         }
