@@ -52,3 +52,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: WhiteKeys
+    uniqueID: 1340206775
+    locked: 0
+  - name: BlackKeys
+    uniqueID: 563640441
+    locked: 0
