@@ -38,7 +38,7 @@ public class mazemovement : MonoBehaviour
                 velocity.x = Mathf.MoveTowards(velocity.x, speed * Input.GetAxis("Horizontal"), acceleration * Time.fixedDeltaTime);
                 myrb.velocity = new Vector2(velocity.x, velocity.y);
         }
-        else
+        else 
         {
 
             velocity.x = Mathf.MoveTowards(velocity.x, speed * Input.GetAxis("Horizontal"), deceleration * Time.fixedDeltaTime);
