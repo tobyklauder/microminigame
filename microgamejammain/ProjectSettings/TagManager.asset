@@ -22,7 +22,7 @@ TagManager:
   - bullet
   - alien
   - alienbullet
-  - 
+  - Background
   - 
   - 
   - 
@@ -43,6 +43,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: RaineBackground
+    uniqueID: 1205160177
+    locked: 0
   - name: EthanBackground
     uniqueID: 1290657375
     locked: 0
