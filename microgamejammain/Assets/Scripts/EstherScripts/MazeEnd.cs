@@ -37,6 +37,10 @@ public class MazeEnd : MonoBehaviour
             pickgame.delayedscenechange();
             
         }
+        if (Mathf.Floor(timer)==5)
+        {
+            pickgame.delayedscenechange();
+        }
     }
 
     int lanterncount()

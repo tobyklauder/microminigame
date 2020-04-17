@@ -22,10 +22,9 @@ public class MazeLanters : MonoBehaviour
     void Start()
     {
         boxcollider = GetComponent<BoxCollider2D>();
-        thisobj = GetComponent<GameObject>(); 
+        thisobj = GetComponent<GameObject>();
         spriterend = GetComponent<SpriteRenderer>();
         StartCoroutine(randomlantern());
-        lanternspawn();
     }
 
     // Update is called once per frame
@@ -41,7 +40,7 @@ public class MazeLanters : MonoBehaviour
 
     IEnumerator randomlantern()
     {
-        yield return new WaitForSecondsRealtime(Random.Range(.5f,3f));
+        yield return new WaitForSecondsRealtime(Random.Range(.5f, 3f));
         x = Random.Range(0, 3);
         spriterend.sprite = lanterns[x];
         running = false;
@@ -55,8 +54,8 @@ public class MazeLanters : MonoBehaviour
         foreach (Collider2D hit in hits)
         {
             //makesure not own collider
-           if (hit == boxcollider)
-               continue;
+            if (hit == boxcollider)
+                continue;
 
 
 
@@ -70,12 +69,7 @@ public class MazeLanters : MonoBehaviour
             }
         }
 
-    
+
     }
 
-
-    void lanternspawn()
-    {
-        //select quadrant
-    }
 }
