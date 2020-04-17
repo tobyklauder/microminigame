@@ -44,10 +44,17 @@ public class ethanPlayerController : MonoBehaviour
 
             animator.SetBool("pinMoving", true);
         }
-
         else
         {
             animator.SetBool("pinMoving", false);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "BowBall")
+        {
+            Destroy(gameObject);
         }
     }
 }
