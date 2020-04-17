@@ -25,7 +25,7 @@ public class hunterBallStart : MonoBehaviour
         {
             OneStop++;
             GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-            if((gameObject.transform.position.x >= 2 || gameObject.transform.position.x >= -2) || ((gameObject.transform.position.y >= 2 || gameObject.transform.position.y >= -2)))
+            if((gameObject.transform.position.x >= 2 || gameObject.transform.position.x <= -2) || ((gameObject.transform.position.y >= 2 || gameObject.transform.position.y <= -2)))
             {
                 print("you lose");
             }
