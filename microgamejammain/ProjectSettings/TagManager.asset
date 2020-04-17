@@ -9,6 +9,7 @@ TagManager:
   - player
   - wall
   - alienbullet
+  - BowBall
   layers:
   - Default
   - TransparentFX
